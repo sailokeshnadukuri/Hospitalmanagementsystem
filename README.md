@@ -25,8 +25,7 @@ void printHospital(struct Hospital hosp)
 	printf("\n"); 
 } 
 void sortByPrice(struct Hospital hospitals[], int n) 
-{ 
-	// Implement sorting logic (e.g., bubble sort) 
+{
 	for (int i = 0; i < n - 1; i++) { 
 		for (int j = 0; j < n - i - 1; j++) { 
 			if (hospitals[j].price 
@@ -40,7 +39,6 @@ void sortByPrice(struct Hospital hospitals[], int n)
 } 
 void sortByName(struct Hospital hospitals[], int n) 
 { 
-	// Implement sorting logic (e.g., using strcmp) 
 	for (int i = 0; i < n - 1; i++) { 
 		for (int j = 0; j < n - i - 1; j++) { 
 			if (strcmp(hospitals[j].name, 
@@ -56,8 +54,6 @@ void sortByName(struct Hospital hospitals[], int n)
 
 void sortByRating(struct Hospital hospitals[], int n) 
 { 
-	// Implement sorting logic (e.g., based on rating and 
-	// reviews) 
 	for (int i = 0; i < n - 1; i++) { 
 		for (int j = 0; j < n - i - 1; j++) { 
 			if (hospitals[j].rating * hospitals[j].reviews 
@@ -73,16 +69,11 @@ void sortByRating(struct Hospital hospitals[], int n)
 void printHospitalsInCity(struct Hospital hospitals[]) 
 { 
 	char city[50]; 
-	int hospitalsFound 
-		= 0; // Counter for hospitals found in the city 
-
+	int hospitalsFound = 0; 
 	printf("Enter city name (X, Y or Z): "); 
 	scanf("%s", city); 
-
-	printf("Hospitals in %s:\n", city); 
-
-	for (int i = 0; i < 5; i++) { 
-		// Use strcasecmp for case-insensitive comparison 
+        printf("Hospitals in %s:\n", city); 
+        for (int i = 0; i < 5; i++) { 
 		if (strcasecmp(hospitals[i].city, city) == 0) { 
 			printf("Hospital Name: %s\n", 
 				hospitals[i].name); 
@@ -101,11 +92,8 @@ void printHospitalsInCity(struct Hospital hospitals[])
 		printf("No hospitals found in %s\n", city); 
 	} 
 } 
-
-// Function to sort hospitals by available beds (descending) 
 void sortByBeds(struct Hospital hospitals[], int n) 
-{ 
-	// Implement sorting logic (e.g., bubble sort) 
+{
 	for (int i = 0; i < n - 1; i++) { 
 		for (int j = 0; j < n - i - 1; j++) { 
 			if (hospitals[j].beds < hospitals[j + 1].beds) { 
@@ -117,7 +105,6 @@ void sortByBeds(struct Hospital hospitals[], int n)
 	} 
 } 
 
-// Function to print patient data 
 void printPatient(struct Patient patient) 
 { 
 	printf("Patient Name: %s\n", patient.name); 
@@ -127,15 +114,12 @@ void printPatient(struct Patient patient)
 
 int main() 
 { 
-	// Sample hospital data 
 	struct Hospital hospitals[5] 
 		= { { "Hospital A", "X", 100, 250.0, 4.5, 100 }, 
 			{ "Hospital B", "Y", 150, 200.0, 4.2, 80 }, 
 			{ "Hospital C", "X", 200, 180.0, 4.0, 120 }, 
 			{ "Hospital D", "Z", 80, 300.0, 4.8, 90 }, 
 			{ "Hospital E", "Y", 120, 220.0, 4.6, 110 } }; 
-
-	// Sample patient data (associated with hospitals) 
 	struct Patient patients[5][3] = { { { "Amar", 35 }, 
 										{ "Manish", 45 }, 
 										{ "Atul", 28 } }, 
@@ -152,7 +136,7 @@ int main()
 										{ "Aman", 48 }, 
 										{ "Sahil", 33 } } }; 
 
-	int n = 5; // Number of hospitals 
+	int n = 5; 
 
 	int choice; 
 	char city[50]; 
