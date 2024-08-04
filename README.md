@@ -1,6 +1,5 @@
-# Hospitalmanagementsystem
-// C Program to implement Hospital Management System 
-#include <ctype.h> // Include ctype.h for strcasecmp 
+# Hospitalmanagementsystem 
+#include <ctype.h> 
 #include <stdio.h> 
 #include <string.h> 
 
