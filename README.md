@@ -2,8 +2,6 @@
 #include <ctype.h> 
 #include <stdio.h> 
 #include <string.h> 
-
-// Define a structure for Hospital 
 struct Hospital { 
 	char name[50]; 
 	char city[50]; 
@@ -11,15 +9,11 @@ struct Hospital {
 	float price; 
 	float rating; 
 	int reviews; 
-}; 
-
-// Define a structure for Patient 
+};  
 struct Patient { 
 	char name[50]; 
 	int age; 
 }; 
-
-// Function to print hospital data 
 void printHospital(struct Hospital hosp) 
 { 
 	printf("Hospital Name: %s\n", hosp.name); 
@@ -30,8 +24,6 @@ void printHospital(struct Hospital hosp)
 	printf("Reviews: %d\n", hosp.reviews); 
 	printf("\n"); 
 } 
-
-// Function to sort hospitals by beds price (ascending) 
 void sortByPrice(struct Hospital hospitals[], int n) 
 { 
 	// Implement sorting logic (e.g., bubble sort) 
@@ -46,8 +38,6 @@ void sortByPrice(struct Hospital hospitals[], int n)
 		} 
 	} 
 } 
-
-// Function to sort hospitals by name (ascending) 
 void sortByName(struct Hospital hospitals[], int n) 
 { 
 	// Implement sorting logic (e.g., using strcmp) 
@@ -64,8 +54,6 @@ void sortByName(struct Hospital hospitals[], int n)
 	} 
 } 
 
-// Function to sort hospitals by rating and reviews 
-// (descending) 
 void sortByRating(struct Hospital hospitals[], int n) 
 { 
 	// Implement sorting logic (e.g., based on rating and 
@@ -82,9 +70,6 @@ void sortByRating(struct Hospital hospitals[], int n)
 		} 
 	} 
 } 
-
-// Function to print hospitals in a specific city 
-// (case-insensitive) 
 void printHospitalsInCity(struct Hospital hospitals[]) 
 { 
 	char city[50]; 
